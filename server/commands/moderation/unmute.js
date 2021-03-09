@@ -1,7 +1,7 @@
 module.exports = {
     name: 'unmute',
     description: 'This command unmutes a member',
-    execute (message, args) {
+    execute (client, message, args) {
         if(message.member.permissions.has("MANAGE_ROLES")){
             const user = message.mentions.users.first();
             if(user) {

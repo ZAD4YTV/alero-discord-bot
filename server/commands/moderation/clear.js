@@ -1,7 +1,7 @@
 module.exports = {
     name: "clear",
     description: "Clear messages! Required permission: Manage Messages",
-    async execute(message, args) {
+    async execute(client, message, args) {
         if(message.member.permissions.has("MANAGE_MESSAGES")){  
             if(!args[0]) return message.reply("Please, enter the amount of messages that you want to clear!");
             if(isNaN(args[0])) return message.reply("Please enter a real number!");

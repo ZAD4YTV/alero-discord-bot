@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'dev-info',
     description: 'This is a command that explain info of the owner of this bot!',
-    execute(message, args, client) {
+    execute(client, message, args) {
         
         const embed = new Discord.MessageEmbed()
             .setColor('#0099ff')

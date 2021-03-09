@@ -1,7 +1,7 @@
 module.exports = {
     name: 'disconnect',
     description: 'Stop the bot and leave the channel',
-    async execute(message, args) {
+    async execute(client, message, args) {
         const voiceChannel = message.member.voice.channel;
         
         if(!voiceChannel) return message.reply('You need to be in a voice channel to stop the music!');

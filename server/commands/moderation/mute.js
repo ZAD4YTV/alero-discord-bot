@@ -2,7 +2,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: 'This command mutes a member',
-    execute (message, args) {
+    execute (client, message, args) {
         if(message.member.permissions.has("MANAGE_ROLES")){
             const user = message.mentions.users.first();
             if(user) {
